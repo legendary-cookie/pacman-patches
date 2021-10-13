@@ -1,0 +1,16 @@
+diff --git a/lib/libalpm/sync.c b/lib/libalpm/sync.c
+index 36ad6242..fe280796 100644
+--- a/lib/libalpm/sync.c
++++ b/lib/libalpm/sync.c
+@@ -113,9 +113,8 @@ static int check_literal(alpm_handle_t *handle, alpm_pkg_t *lpkg,
+ 				return 1;
+ 			}
+ 		} else {
+-			alpm_db_t *sdb = alpm_pkg_get_db(spkg);
+-			_alpm_log(handle, ALPM_LOG_WARNING, _("%s: local (%s) is newer than %s (%s)\n"),
+-					lpkg->name, lpkg->version, sdb->treename, spkg->version);
++			//alpm_db_t *sdb = alpm_pkg_get_db(spkg);
++			//_alpm_log(handle, ALPM_LOG_WARNING, _("%s: local (%s) is newer than %s (%s)\n"),lpkg->name, lpkg->version, sdb->treename, spkg->version);
+ 		}
+ 	}
+ 	return 0;
